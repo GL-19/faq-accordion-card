@@ -1,0 +1,43 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	min-width: 100vw;
+	min-height: 100vh;
+	background: url(../images/bg-pattern-desktop.svg), linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: hsl(238, 29%, 16%);
+}
+
+.content-container {
+	font-size: 12px;
+}
+
+.content-container:hover {
+	cursor: pointer;
+}
+
+.content-container:hover > .question {
+	color: hsl(14, 88%, 65%);
+}
+
+.content-container:hover > .question--active {
+	color: hsl(238, 29%, 16%);
+}
+
+.answer {
+	display: none;
+}
+
+.answer--active {
+	display: block;
+}
+
+.icon-arrow--active {
+	transform: rotate(180deg);
+}
