@@ -20,7 +20,8 @@ body {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	width: 800px;
+	width: 850px;
+	padding: 70px 0;
 	background-color: #ffffff;
 	border-radius: 25px;
 }
@@ -28,7 +29,9 @@ body {
 .card-images {
 	background: url(../images/bg-pattern-desktop.svg);
 	position: relative;
+	padding-right: 60px;
 }
+
 .images-wrapper {
 	width: 100%;
 	height: 100%;
@@ -36,20 +39,28 @@ body {
 }
 
 .woman-image {
-	box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-	margin-left: -100px;
+	margin-left: -80px;
+}
+
+.woman-desktop {
+	display: block;
+}
+
+.woman-mobile {
+	display: none;
 }
 
 .box-image {
 	position: fixed;
-	margin-left: -300px;
+	margin-left: -95px;
+	margin-top: -220px;
 }
 
 .card-content {
-	width: 500px;
-	height: 500px;
-	padding: 50px;
+	min-width: 60%;
+	padding-right: 20px;
 }
+
 .content-container {
 	font-size: 12px;
 	border-bottom: 1px hsl(240, 5%, 91%) solid;
@@ -91,4 +102,40 @@ body {
 
 .icon-arrow--active {
 	transform: rotate(180deg);
+}
+
+@media screen and (max-width: 450px) {
+	.card {
+		display: flex;
+		flex-direction: column;
+		max-width: 325px;
+		padding: 0;
+	}
+	.title {
+		text-align: center;
+	}
+	.box-image {
+		display: none;
+	}
+
+	.images-wrapper {
+		overflow: visible;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
+
+	.woman-image {
+		margin-top: -100px;
+	}
+
+	.woman-desktop {
+		display: none;
+	}
+
+	.woman-mobile {
+		display: block;
+	}
 }

@@ -9,16 +9,13 @@ const active = {
 const content = document.querySelectorAll(".content-container");
 content.forEach((element) => {
 	element.addEventListener("click", (event) => {
-		console.log("clicou");
 		let box = event.currentTarget;
 		if (!active[box.id]) {
 			content.forEach(removeAnswer);
 			displayAnswer(box);
-			console.log("if");
 		} else {
 			removeAnswer(box);
 		}
-		console.log(active);
 	});
 });
 
