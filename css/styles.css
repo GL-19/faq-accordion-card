@@ -7,15 +7,54 @@
 body {
 	min-width: 100vw;
 	min-height: 100vh;
-	background: url(../images/bg-pattern-desktop.svg), linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+	padding: 35px;
+	background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	font-family: "Kumbh Sans", sans-serif;
 	color: hsl(238, 29%, 16%);
 }
 
+.card {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 800px;
+	background-color: #ffffff;
+	border-radius: 25px;
+}
+
+.card-images {
+	background: url(../images/bg-pattern-desktop.svg);
+	position: relative;
+}
+.images-wrapper {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.woman-image {
+	box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+	margin-left: -100px;
+}
+
+.box-image {
+	position: fixed;
+	margin-left: -300px;
+}
+
+.card-content {
+	width: 500px;
+	height: 500px;
+	padding: 50px;
+}
 .content-container {
 	font-size: 12px;
+	border-bottom: 1px hsl(240, 5%, 91%) solid;
+	padding: 20px 0;
+	max-width: 320px;
 }
 
 .content-container:hover {
@@ -30,8 +69,20 @@ body {
 	color: hsl(238, 29%, 16%);
 }
 
+.question-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.title {
+	font-weight: 700;
+}
+.question--active {
+	font-weight: 700;
+}
 .answer {
 	display: none;
+	margin-top: 15px;
 }
 
 .answer--active {
