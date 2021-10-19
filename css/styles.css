@@ -20,7 +20,7 @@ body {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	width: 850px;
+	width: 900px;
 	padding: 70px 0;
 	background-color: #ffffff;
 	border-radius: 25px;
@@ -29,7 +29,7 @@ body {
 .card-images {
 	background: url(../images/bg-pattern-desktop.svg);
 	position: relative;
-	padding-right: 60px;
+	padding-right: 100px;
 }
 
 .images-wrapper {
@@ -66,6 +66,9 @@ body {
 	border-bottom: 1px hsl(240, 5%, 91%) solid;
 	padding: 20px 0;
 	max-width: 320px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .content-container:hover {
@@ -80,11 +83,6 @@ body {
 	color: hsl(238, 29%, 16%);
 }
 
-.question-container {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
 .title {
 	font-weight: 700;
 }
@@ -102,29 +100,30 @@ body {
 
 .icon-arrow--active {
 	transform: rotate(180deg);
+	align-self: flex-start;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 900px) {
+	body {
+		padding-top: 150px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 	.card {
 		display: flex;
 		flex-direction: column;
 		max-width: 325px;
-		padding: 0;
+		padding: 0 20px;
+		padding-bottom: 50px;
 	}
-	.title {
-		text-align: center;
-	}
+
 	.box-image {
 		display: none;
 	}
 
 	.images-wrapper {
 		overflow: visible;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		text-align: center;
 	}
 
 	.woman-image {
@@ -137,5 +136,20 @@ body {
 
 	.woman-mobile {
 		display: block;
+		margin-top: -105px;
+		margin-left: 75px;
+		margin-bottom: 40px;
+	}
+
+	.title {
+		text-align: center;
+	}
+
+	.content-container {
+		width: 250px;
+	}
+
+	.answer {
+		width: 100%;
 	}
 }
